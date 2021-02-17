@@ -1,0 +1,9 @@
+<div class="container">
+  <div>
+    <h4>Welcome in Tetris app</h4>
+    <p *ngIf="!submit">
+      <span>
+        <app-welcome-page (addPlayer)="add($event)"></app-welcome-page>
+      </span>
+    </p>
+  </div>
