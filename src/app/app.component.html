@@ -16,5 +16,5 @@
       <span>
         <h2 class="message">{{ currentPlayer }}</h2>
         <h2 class="message">{{ gameStatus }}</h2>
-        <app-tetris-mechanism class="content" (gameStatusMessage)="getStatus($event)"
-          (gameDataMessage)="getData($event)"></app-tetris-mechanism>
+        <app-tetris-mechanism class="content" (gameStatusInfo)="getStatus($event)" (gameDataInfo)="getData($event)">
+        </app-tetris-mechanism>
