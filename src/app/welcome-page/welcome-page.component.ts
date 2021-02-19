@@ -9,7 +9,7 @@ import { Player } from '../app.component';
 })
 export class WelcomePageComponent implements OnInit {
 
-  @Input() name: string;
+  @Input() name: string; // udekorowanie Input'em informuje angulara, że do tego pola będzie można wiązać w szablonie za pomocą property biding'u
   @Output() addPlayer = new EventEmitter<Player>();
   playerName: string;
 

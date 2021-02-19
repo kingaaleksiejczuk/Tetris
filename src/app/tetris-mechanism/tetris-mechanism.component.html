@@ -1,1 +1,17 @@
-<p>tetris-mechanism works!</p>
+<div>
+    <div>
+        <p class="message">Game time : {{ time }} </p>
+        <p class="message">Game score : {{ score }}</p>
+        <p *ngIf="true">
+            <tetris-core #game (lineCleared)="onLineCleared()"></tetris-core>
+            <button class="game" (click)="startGame(game)">Start</button>
+            <button class="game" (click)="pauseGame(game)">Stop</button>
+            <button class="game" (click)="restartGame(game)">Reset</button>
+            <button class="game" (click)="endGame(game)">EndGame</button>
+            <button class="game" (click)="game.actionRotate()">Rotate</button>
+            <button class="game" (click)="game.actionLeft()">Left</button>
+            <button class="game" (click)="game.actionRight()">Right</button>
+            <button class="game" (click)="game.actionDown()">Down</button>
+        </p>
+    </div>
+</div>

@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { TetrisCoreModule } from 'ngx-tetris';
 import { ListComponent } from './list/list.component';
 import { TetrisMechanismComponent } from './tetris-mechanism/tetris-mechanism.component';
+import { HotkeyModule } from 'angular2-hotkeys';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { TetrisMechanismComponent } from './tetris-mechanism/tetris-mechanism.co
     WelcomePageComponent,
     ListComponent,
     TetrisMechanismComponent,
+
   ],
   imports: [
     BrowserModule,
     TetrisCoreModule,
     FormsModule,
+    HotkeyModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

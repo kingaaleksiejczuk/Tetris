@@ -2,6 +2,8 @@
     <!-- do zmiennej szablonowej playerForm przypisujemy dyrektywę ngForm-->
     <p *ngIf="true">
         <input class="input" required type="text" name="name" [(ngModel)]="name" placeholder="Player name" />
+        <!--dyrektywa ngModel pozwala na powiazanie wartości input w tym przypadku z polem name-->
+
         <button type="submit" class="submit" [disabled]="!playerForm.form.valid" (click)="add(playerForm.form)">
             Submit Player
         </button>

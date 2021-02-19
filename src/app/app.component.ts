@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 export interface Player {
 
-  name: string;
+  name?: string;
   score?: number;
   time?: number;
 
@@ -19,10 +19,20 @@ export class AppComponent {
   playerName: Array<Player> = [];
   submit: boolean;
   currentPlayer: string;
+
   gameStatus: string;
+  gameEvent: [];
 
   add(player: Player) {
     this.playerName.push(player);
     this.currentPlayer = "Now " + player.name + " is playing";
+  }
+
+  getStatus(gameStatusInfo) {
+    this.gameStatus = gameStatusInfo;
+  }
+
+  getData(gameDataInfo) {
+    this.gameEvent = gameDataInfo;
   }
 }

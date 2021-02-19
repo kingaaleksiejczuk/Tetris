@@ -6,4 +6,15 @@
         <app-welcome-page (addPlayer)="add($event)"></app-welcome-page>
       </span>
     </p>
+    <button (click)="submit = !submit" class="button" [disabled]="!currentPlayer ? 'disabled' : null">
+      {{ submit ? "Back" : "Play" }}
+    </button>
   </div>
+
+  <div>
+    <p *ngIf="submit">
+      <span>
+        <h2 class="message">{{ currentPlayer }}</h2>
+        <h2 class="message">{{ gameStatus }}</h2>
+        <app-tetris-mechanism class="content" (gameStatusMessage)="getStatus($event)"
+          (gameDataMessage)="getData($event)"></app-tetris-mechanism>
